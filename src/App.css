@@ -1,0 +1,44 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+}
+textarea {
+  height: 350px;
+  width: 550px;
+  resize: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.area {
+  display: flex;
+  gap: 10px;
+}
+
+.area > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-group {
+  display: flex;
+}
+.list-group > div {
+  display: flex;
+  flex-direction: column;
+}
+.actions {
+  display: flex;
+  place-items: center;
+  gap: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0.5rem;
+}
