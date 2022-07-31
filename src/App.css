@@ -54,6 +54,7 @@ ul {
   max-width: 550px;
   padding: 0.5rem;
   height: 100%;
+  text-transform: lowercase;
 }
 
 .label-copy {
