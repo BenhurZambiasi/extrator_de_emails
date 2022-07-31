@@ -23,45 +23,49 @@ export const Controles: React.FC<IControlesProps> = ({
   separador,
 }) => {
   return (
-    <div>
+    <div className="controles">
       <span>Separador</span>
-      {separators.map((separator, index) => {
-        return (
-          <label htmlFor={separator.id} key={index}>
-            <input
-              type="radio"
-              name="radio"
-              id={separator.id}
-              value={separator.value}
-              checked={separator.value == separador ? true : false}
-              onClick={handleSelect}
-            />
-            {separator.label}
-          </label>
-        );
-      })}
+      <div className="controles-separador">
+        {separators.map((separator, index) => {
+          return (
+            <label htmlFor={separator.id} key={index} id="radio">
+              <input
+                type="radio"
+                name="radio"
+                id={separator.id}
+                value={separator.value}
+                checked={separator.value == separador ? true : false}
+                onClick={handleSelect}
+              />
+              {separator.label}
+            </label>
+          );
+        })}
+      </div>
 
       <span>Extrair</span>
-      <label htmlFor="email">
-        <input
-          type="checkbox"
-          name="email"
-          id="email"
-          onChange={handleCheck}
-          checked={cheks.includes("email")}
-        />
-        E-mail
-      </label>
-      <label htmlFor="phone">
-        <input
-          type="checkbox"
-          name="phone"
-          id="phone"
-          onChange={handleCheck}
-          checked={cheks.includes("phone")}
-        />
-        Telefone
-      </label>
+      <div className="controles-separador">
+        <label htmlFor="email">
+          <input
+            type="checkbox"
+            name="email"
+            id="email"
+            onChange={handleCheck}
+            checked={cheks.includes("email")}
+          />
+          E-mail
+        </label>
+        <label htmlFor="phone">
+          <input
+            type="checkbox"
+            name="phone"
+            id="phone"
+            onChange={handleCheck}
+            checked={cheks.includes("phone")}
+          />
+          Telefone
+        </label>
+      </div>
     </div>
   );
 };

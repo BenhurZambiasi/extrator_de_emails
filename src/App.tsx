@@ -103,9 +103,11 @@ function App() {
     <div className="App">
       <h2>Extrator de e-mails e telefones</h2>
       <div className="area">
-        <textarea
-          placeholder="Cole aqui o texto"
-          onChange={({ target }) => handleChange(target.value)}></textarea>
+        <div className="text-pasts">
+          <textarea
+            placeholder="Cole aqui o texto"
+            onChange={({ target }) => handleChange(target.value)}></textarea>
+        </div>
         <Controles
           cheks={cheks}
           handleCheck={handleCheck}

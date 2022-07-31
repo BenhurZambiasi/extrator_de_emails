@@ -5,11 +5,16 @@
 #root {
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
+  max-width: 1024px;
 }
 textarea {
   height: 350px;
-  width: 550px;
+  width: 100%;
   resize: none;
+}
+.text-pasts {
+  width: 100%;
 }
 
 .App {
@@ -32,7 +37,7 @@ textarea {
 .list-group {
   display: flex;
   flex-direction: column;
-  max-width: 550px;
+  width: 100%;
   gap: 10px;
 }
 .list-group > div {
@@ -51,7 +56,6 @@ ul {
 }
 #emails {
   width: 100%;
-  max-width: 550px;
   padding: 0.5rem;
   height: 100%;
   text-transform: lowercase;
@@ -61,4 +65,30 @@ ul {
   display: flex;
   place-items: center;
   place-content: space-between;
+}
+
+#radio {
+  white-space: nowrap;
+}
+
+.controles-separador {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .controles-separador {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    gap: 10px;
+  }
 }
