@@ -132,7 +132,11 @@ function App() {
               <label>Emails</label>
               <button onClick={() => copy(String(emails))}>copiar</button>
             </div>
-            <textarea id="emails" value={emails} rows={10}></textarea>
+            <textarea
+              placeholder="emails"
+              id="email"
+              value={emails}
+              rows={10}></textarea>
           </div>
         )}
 
@@ -142,7 +146,11 @@ function App() {
               <label>Telefones</label>
               <button onClick={() => copy(String(phones))}>copiar</button>
             </div>
-            <textarea id="emails" value={phones} rows={10}></textarea>
+            <textarea
+              id="phone"
+              placeholder="Phone"
+              value={phones}
+              rows={10}></textarea>
           </div>
         )}
       </div>
